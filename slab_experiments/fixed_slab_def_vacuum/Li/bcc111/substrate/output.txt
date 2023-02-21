@@ -1,0 +1,350 @@
+
+  ___ ___ ___ _ _ _  
+ |   |   |_  | | | | 
+ | | | | | . | | | | 
+ |__ |  _|___|_____|  22.8.0
+ |___|_|             
+
+User:   vazumah@c20.hercules
+Date:   Thu Feb  2 02:36:24 2023
+Arch:   x86_64
+Pid:    25151
+CWD:    /home/vazumah/Python_projects/LiNRR/autocad_start/slab_experiments/fixed_slab_def_vacuum/Li/bcc111/substrate
+Python: 3.10.8
+gpaw:   /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/gpaw
+_gpaw:  /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/
+        _gpaw.cpython-310-x86_64-linux-gnu.so
+ase:    /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/ase (version 3.22.1)
+numpy:  /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/numpy (version 1.24.1)
+scipy:  /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/scipy (version 1.10.0)
+libxc:  5.2.3
+units:  Angstrom and eV
+cores: 24
+OpenMP: True
+OMP_NUM_THREADS: 1
+
+Reading from output.gpw
+Read dipole, energy, free_energy, magmom, magmoms
+Reading input parameters:
+  h: 0.16
+  kpts: {size: [4, 4, 1]}
+  maxiter: 999
+  occupations: {name: fermi-dirac,
+                width: 0.05}
+  poissonsolver: {dipolelayer: xy}
+  xc: BEEF-vdW
+
+Initialize ...
+
+species:
+  Li:
+    name: Lithium
+    id: 830b4218f175192f93f959cfc0aad614
+    Z: 3.0
+    valence: 1
+    core: 2
+    charge: 0.0
+    file: /home/vazumah/.conda/envs/GPAW/share/gpaw/Li.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.33,
+                           lmax: 2}
+    cutoffs: {filter: 1.91,
+              core: 2.55}
+    valence states:
+      #              energy  rcut
+      - 2s(1.00)    -2.874   1.058
+      - 2p(0.00)    -1.090   1.058
+      -  s          24.337   1.058
+  
+    # Using partial waves for Li as LCAO basis
+
+Reference energy: -7300.361529  # eV
+
+Spin-paired calculation
+
+Convergence criteria:
+ Maximum [total energy] change in last 3 cyles: 0.0005 eV / electron
+ Maximum integral of absolute [dens]ity change: 0.0001 electrons / valence electron
+ Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+ Maximum number of scf [iter]ations: 999
+ (Square brackets indicate name in SCF output, whereas a 'c' in
+ the SCF output indicates the quantity has converged.)
+
+Symmetries present (total): 12
+
+  ( 1  0  0)  ( 1  0  0)  ( 1 -1  0)  ( 1 -1  0)  ( 0  1  0)  ( 0  1  0)
+  ( 1 -1  0)  ( 0  1  0)  ( 1  0  0)  ( 0 -1  0)  ( 1  0  0)  (-1  1  0)
+  ( 0  0 -1)  ( 0  0  1)  ( 0  0 -1)  ( 0  0  1)  ( 0  0  1)  ( 0  0 -1)
+
+  ( 0 -1  0)  ( 0 -1  0)  (-1  1  0)  (-1  1  0)  (-1  0  0)  (-1  0  0)
+  ( 1 -1  0)  (-1  0  0)  ( 0  1  0)  (-1  0  0)  ( 0 -1  0)  (-1  1  0)
+  ( 0  0  1)  ( 0  0 -1)  ( 0  0 -1)  ( 0  0  1)  ( 0  0 -1)  ( 0  0  1)
+Note: your k-points are not as symmetric as your crystal!
+
+16 k-points: 4 x 4 x 1 Monkhorst-Pack grid
+6 k-points in the irreducible part of the Brillouin zone
+       k-points in crystal coordinates                weights
+   0:     0.12500000   -0.12500000    0.00000000          2/16
+   1:     0.12500000    0.12500000    0.00000000          2/16
+   2:     0.37500000   -0.37500000    0.00000000          2/16
+   3:     0.37500000   -0.12500000    0.00000000          4/16
+   4:     0.37500000    0.12500000    0.00000000          4/16
+   5:     0.37500000    0.37500000    0.00000000          2/16
+
+Wave functions: Uniform real-space grid
+  Kinetic energy operator: 8*3+1=25 point O(h^6) finite-difference Laplacian
+  ScaLapack parameters: grid=1x1, blocksize=None
+  Wavefunction extrapolation:
+    Improved wavefunction reuse through dual PAW basis 
+
+Occupation numbers: Fermi-Dirac:
+  width: 0.0500  # eV
+ 
+
+Eigensolver
+   Davidson(niter=2) 
+
+Densities:
+  Coarse grid: 76*76*144 grid
+  Fine grid: 152*152*288 grid
+  Total Charge: 0.000000 
+
+Density mixing:
+  Method: separate
+  Backend: pulay
+  Linear mixing parameter: 0.05
+  old densities: 5
+  Damping of long wavelength oscillations: 50 
+
+Hamiltonian:
+  XC and Coulomb potentials evaluated on a 152*152*288 grid
+  Using the BEEF-vdW Exchange-Correlation functional
+  Interpolation: tri-quintic (5. degree polynomial)
+  Poisson solver: FastPoissonSolver using
+    Stencil: 8*3+1=25 point O(h^6) finite-difference Laplacian
+    FFT axes: [0, 1]
+    FST axes: [2]
+
+Dipole correction along z-axis 
+
+XC parameters: BEEF-vdW with 2 nearest neighbor stencil
+
+Memory estimate:
+  Process memory now: 230.95 MiB
+  Calculator: 312.61 MiB
+    Density: 101.59 MiB
+      Arrays: 40.94 MiB
+      Localized functions: 45.01 MiB
+      Mixer: 15.64 MiB
+    Hamiltonian: 30.33 MiB
+      Arrays: 26.77 MiB
+      XC: 0.00 MiB
+      Poisson: 0.00 MiB
+      vbar: 3.56 MiB
+    Wavefunctions: 180.69 MiB
+      Arrays psit_nG: 81.35 MiB
+      Eigensolver: 97.10 MiB
+      Projections: 0.02 MiB
+      Projectors: 2.22 MiB
+
+Total number of cores used: 24
+Parallelization over k-points: 6
+Domain decomposition: 1 x 2 x 2
+
+Number of atoms: 36
+Number of atomic orbitals: 144
+Number of bands in calculation: 26
+Number of valence electrons: 36
+Bands to converge: occupied
+
+... initialized
+
+Initializing position-dependent things.
+
+Creating initial wave functions:
+  26 bands from LCAO basis set
+
+                                                              
+                                                              
+                                                              
+                                                              
+                                                              
+                       LiLi       LiLi        Lii             
+                                                              
+                 Li         LiLi       LiLi         Li        
+               Li         Li          Li                      
+                      Lii        Lii        LiLi              
+       LiLi       LiLi        Lii                             
+              Lii        Lii        LiLi                      
+                                                              
+       Li         Li          Li                              
+                                                              
+                                                              
+                                                              
+                                                              
+
+Positions:
+   0 Li     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Li     4.573671    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 Li     9.147343    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Li     2.286836    3.960916   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Li     6.860507    3.960916   10.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Li    11.434178    3.960916   10.000000    ( 0.0000,  0.0000,  0.0000)
+   6 Li     4.573671    7.921831   10.000000    ( 0.0000,  0.0000,  0.0000)
+   7 Li     9.147343    7.921831   10.000000    ( 0.0000,  0.0000,  0.0000)
+   8 Li    13.721014    7.921831   10.000000    ( 0.0000,  0.0000,  0.0000)
+   9 Li     2.286836    1.320305   10.933597    ( 0.0000,  0.0000,  0.0000)
+  10 Li     6.860507    1.320305   10.933597    ( 0.0000,  0.0000,  0.0000)
+  11 Li    11.434178    1.320305   10.933597    ( 0.0000,  0.0000,  0.0000)
+  12 Li     4.573671    5.281221   10.933597    ( 0.0000,  0.0000,  0.0000)
+  13 Li     9.147343    5.281221   10.933597    ( 0.0000,  0.0000,  0.0000)
+  14 Li    13.721014    5.281221   10.933597    ( 0.0000,  0.0000,  0.0000)
+  15 Li     6.860507    9.242136   10.933597    ( 0.0000,  0.0000,  0.0000)
+  16 Li    11.434178    9.242136   10.933597    ( 0.0000,  0.0000,  0.0000)
+  17 Li    16.007850    9.242136   10.933597    ( 0.0000,  0.0000,  0.0000)
+  18 Li     0.000000    2.640610   11.867193    ( 0.0000,  0.0000,  0.0000)
+  19 Li     4.573671    2.640610   11.867193    ( 0.0000,  0.0000,  0.0000)
+  20 Li     9.147343    2.640610   11.867193    ( 0.0000,  0.0000,  0.0000)
+  21 Li     2.286836    6.601526   11.867193    ( 0.0000,  0.0000,  0.0000)
+  22 Li     6.860507    6.601526   11.867193    ( 0.0000,  0.0000,  0.0000)
+  23 Li    11.434178    6.601526   11.867193    ( 0.0000,  0.0000,  0.0000)
+  24 Li     4.573671   10.562441   11.867193    ( 0.0000,  0.0000,  0.0000)
+  25 Li     9.147343   10.562441   11.867193    ( 0.0000,  0.0000,  0.0000)
+  26 Li    13.721014   10.562441   11.867193    ( 0.0000,  0.0000,  0.0000)
+  27 Li     0.000000    0.000000   12.800790    ( 0.0000,  0.0000,  0.0000)
+  28 Li     4.573671    0.000000   12.800790    ( 0.0000,  0.0000,  0.0000)
+  29 Li     9.147343    0.000000   12.800790    ( 0.0000,  0.0000,  0.0000)
+  30 Li     2.286836    3.960916   12.800790    ( 0.0000,  0.0000,  0.0000)
+  31 Li     6.860507    3.960916   12.800790    ( 0.0000,  0.0000,  0.0000)
+  32 Li    11.434178    3.960916   12.800790    ( 0.0000,  0.0000,  0.0000)
+  33 Li     4.573671    7.921831   12.800790    ( 0.0000,  0.0000,  0.0000)
+  34 Li     9.147343    7.921831   12.800790    ( 0.0000,  0.0000,  0.0000)
+  35 Li    13.721014    7.921831   12.800790    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes   13.721014    0.000000    0.000000    76     0.1564
+  2. axis:    yes    6.860507   11.882747    0.000000    76     0.1564
+  3. axis:    no     0.000000    0.000000   22.800790   144     0.1583
+
+  Lengths:  13.721014  13.721014  22.800790
+  Angles:   90.000000  90.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1647
+
+     iter     time        total  log10-change:
+                         energy  eigst   dens
+iter:   1 02:39:57  -186.782399  +0.91
+iter:   2 02:42:51  -187.277820  +0.37  -1.45
+iter:   3 02:45:49  -187.392478  -0.10  -1.74
+iter:   4 02:48:44  -187.433322  -0.52  -2.05
+Writing to output.gpw (mode='')
+
+iter:   5 02:51:40  -187.450584  -0.89  -2.62
+iter:   6 02:54:31  -187.457407  -1.28  -2.42
+iter:   7 02:57:26  -187.460428c -1.62  -2.45
+iter:   8 03:00:17  -187.461901c -1.92  -2.53
+iter:   9 03:03:15  -187.462557c -2.21  -2.55
+Writing to output.gpw (mode='')
+
+iter:  10 03:06:17  -187.462960c -2.42  -2.80
+iter:  11 03:09:04  -187.463089c -2.71  -2.76
+iter:  12 03:12:01  -187.463294c -2.99  -3.29
+iter:  13 03:14:53  -187.463423c -2.82  -3.00
+iter:  14 03:17:52  -187.463374c -3.28  -2.68
+Writing to output.gpw (mode='')
+
+iter:  15 03:20:47  -187.463425c -3.50  -3.29
+iter:  16 03:23:31  -187.463431c -3.75  -3.32
+iter:  17 03:26:37  -187.463453c -3.88  -3.40
+iter:  18 03:29:30  -187.463452c -4.01  -3.25
+iter:  19 03:32:34  -187.463463c -4.17  -3.42
+Writing to output.gpw (mode='')
+
+iter:  20 03:35:29  -187.463458c -4.23  -3.34
+iter:  21 03:38:24  -187.463458c -4.37  -3.52
+iter:  22 03:41:17  -187.463462c -4.48  -3.52
+iter:  23 03:44:03  -187.463466c -4.58  -3.64
+iter:  24 03:46:58  -187.463468c -4.64  -3.79
+Writing to output.gpw (mode='')
+
+iter:  25 03:49:51  -187.463471c -4.78  -3.94
+iter:  26 03:52:37  -187.463474c -4.89  -3.94
+iter:  27 03:55:27  -187.463471c -4.97  -3.97
+iter:  28 03:58:15  -187.463476c -5.01  -4.36c
+iter:  29 04:01:07  -187.463476c -5.16  -4.53c
+Writing to output.gpw (mode='')
+
+iter:  30 04:04:00  -187.463476c -5.26  -4.68c
+iter:  31 04:06:52  -187.463476c -5.36  -4.58c
+iter:  32 04:09:45  -187.463477c -5.43  -4.53c
+iter:  33 04:12:24  -187.463477c -5.54  -4.45c
+iter:  34 04:15:11  -187.463477c -5.64  -4.49c
+Writing to output.gpw (mode='')
+
+iter:  35 04:18:03  -187.463477c -5.72  -4.46c
+iter:  36 04:20:53  -187.463477c -5.81  -4.43c
+iter:  37 04:23:45  -187.463477c -5.88  -4.42c
+iter:  38 04:26:38  -187.463477c -5.97  -4.41c
+iter:  39 04:29:30  -187.463477c -6.06  -4.46c
+Writing to output.gpw (mode='')
+
+iter:  40 04:32:18  -187.463476c -6.12  -4.36c
+iter:  41 04:35:07  -187.463475c -6.21  -4.50c
+iter:  42 04:37:54  -187.463475c -6.30  -4.59c
+iter:  43 04:40:43  -187.463475c -6.37  -4.59c
+iter:  44 04:43:30  -187.463475c -6.45  -4.62c
+Writing to output.gpw (mode='')
+
+iter:  45 04:46:16  -187.463472c -6.48  -4.64c
+iter:  46 04:49:15  -187.463473c -6.61  -4.76c
+iter:  47 04:52:14  -187.463475c -6.65  -4.79c
+iter:  48 04:55:00  -187.463475c -6.76  -4.78c
+iter:  49 04:57:45  -187.463475c -6.84  -4.82c
+Writing to output.gpw (mode='')
+
+iter:  50 05:00:37  -187.463475c -6.91  -4.80c
+iter:  51 05:03:28  -187.463474c -7.00  -4.82c
+iter:  52 05:06:18  -187.463473c -7.06  -4.88c
+iter:  53 05:09:16  -187.463473c -7.14  -4.90c
+iter:  54 05:12:02  -187.463474c -7.11  -4.94c
+Writing to output.gpw (mode='')
+
+iter:  55 05:14:51  -187.463474c -7.24  -5.31c
+iter:  56 05:17:49  -187.463474c -7.36  -5.55c
+iter:  57 05:20:44  -187.463474c -7.45c -5.51c
+
+Converged after 57 iterations.
+
+Dipole moment: (-6.154110, -3.553077, -0.000000) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -7300.361529)
+
+Kinetic:        +71.886062
+Potential:      -58.406079
+External:        +0.000000
+XC:            -200.698497
+Entropy (-ST):   -0.123102
+Local:           -0.183409
+--------------------------
+Free energy:   -187.525025
+Extrapolated:  -187.463474
+
+Dipole-layer corrected work functions: 3.350899, 3.350899 eV
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    16     -3.55922    1.96946
+  0    17     -3.41997    1.59844
+  0    18     -3.41997    1.59843
+  0    19     -3.37897    1.27356
+
+  1    16     -3.51575    1.92865
+  1    17     -3.51574    1.92864
+  1    18     -3.47021    1.83154
+  1    19     -3.47020    1.83151
+
+
+Fermi level: -3.35090
+
+No gap

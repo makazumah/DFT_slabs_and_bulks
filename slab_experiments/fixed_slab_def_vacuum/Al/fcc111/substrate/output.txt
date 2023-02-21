@@ -1,0 +1,329 @@
+
+  ___ ___ ___ _ _ _  
+ |   |   |_  | | | | 
+ | | | | | . | | | | 
+ |__ |  _|___|_____|  22.8.0
+ |___|_|             
+
+User:   vazumah@c08.hercules
+Date:   Tue Jan 17 23:01:01 2023
+Arch:   x86_64
+Pid:    7647
+CWD:    /home/vazumah/Python_projects/LiNRR/autocad_start/slab_experiments/fixed_slab_def_vacuum/Al/fcc111/substrate
+Python: 3.10.8
+gpaw:   /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/gpaw
+_gpaw:  /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/
+        _gpaw.cpython-310-x86_64-linux-gnu.so
+ase:    /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/ase (version 3.22.1)
+numpy:  /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/numpy (version 1.24.1)
+scipy:  /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/scipy (version 1.10.0)
+libxc:  5.2.3
+units:  Angstrom and eV
+cores: 24
+OpenMP: True
+OMP_NUM_THREADS: 1
+
+Reading from output.gpw
+Read dipole, energy, free_energy, magmom, magmoms
+Reading input parameters:
+  h: 0.16
+  kpts: {size: [4, 4, 1]}
+  maxiter: 999
+  occupations: {name: fermi-dirac,
+                width: 0.05}
+  poissonsolver: {dipolelayer: xy}
+  xc: BEEF-vdW
+
+Initialize ...
+
+species:
+  Al:
+    name: Aluminium
+    id: 0292cae29f5d6237e50f6abdd43a7bdd
+    Z: 13.0
+    valence: 3
+    core: 10
+    charge: 0.0
+    file: /home/vazumah/.conda/envs/GPAW/share/gpaw/Al.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.34,
+                           lmax: 2}
+    cutoffs: {filter: 1.91,
+              core: 2.36}
+    valence states:
+      #              energy  rcut
+      - 3s(2.00)    -7.753   1.085
+      - 3p(1.00)    -2.712   1.085
+      -  s          19.459   1.085
+      -  p          24.499   1.085
+      -  d           0.000   1.085
+  
+    # Using partial waves for Al as LCAO basis
+
+Reference energy: -237723.237536  # eV
+
+Spin-paired calculation
+
+Convergence criteria:
+ Maximum [total energy] change in last 3 cyles: 0.0005 eV / electron
+ Maximum integral of absolute [dens]ity change: 0.0001 electrons / valence electron
+ Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+ Maximum number of scf [iter]ations: 999
+ (Square brackets indicate name in SCF output, whereas a 'c' in
+ the SCF output indicates the quantity has converged.)
+
+Symmetries present (total): 12
+
+  ( 1  0  0)  ( 1  0  0)  ( 1 -1  0)  ( 1 -1  0)  ( 0  1  0)  ( 0  1  0)
+  ( 1 -1  0)  ( 0  1  0)  ( 1  0  0)  ( 0 -1  0)  ( 1  0  0)  (-1  1  0)
+  ( 0  0 -1)  ( 0  0  1)  ( 0  0 -1)  ( 0  0  1)  ( 0  0  1)  ( 0  0 -1)
+
+  ( 0 -1  0)  ( 0 -1  0)  (-1  1  0)  (-1  1  0)  (-1  0  0)  (-1  0  0)
+  ( 1 -1  0)  (-1  0  0)  ( 0  1  0)  (-1  0  0)  ( 0 -1  0)  (-1  1  0)
+  ( 0  0  1)  ( 0  0 -1)  ( 0  0 -1)  ( 0  0  1)  ( 0  0 -1)  ( 0  0  1)
+Note: your k-points are not as symmetric as your crystal!
+
+16 k-points: 4 x 4 x 1 Monkhorst-Pack grid
+6 k-points in the irreducible part of the Brillouin zone
+       k-points in crystal coordinates                weights
+   0:     0.12500000   -0.12500000    0.00000000          2/16
+   1:     0.12500000    0.12500000    0.00000000          2/16
+   2:     0.37500000   -0.37500000    0.00000000          2/16
+   3:     0.37500000   -0.12500000    0.00000000          4/16
+   4:     0.37500000    0.12500000    0.00000000          4/16
+   5:     0.37500000    0.37500000    0.00000000          2/16
+
+Wave functions: Uniform real-space grid
+  Kinetic energy operator: 8*3+1=25 point O(h^6) finite-difference Laplacian
+  ScaLapack parameters: grid=1x1, blocksize=None
+  Wavefunction extrapolation:
+    Improved wavefunction reuse through dual PAW basis 
+
+Occupation numbers: Fermi-Dirac:
+  width: 0.0500  # eV
+ 
+
+Eigensolver
+   Davidson(niter=2) 
+
+Densities:
+  Coarse grid: 48*48*168 grid
+  Fine grid: 96*96*336 grid
+  Total Charge: 0.000000 
+
+Density mixing:
+  Method: separate
+  Backend: pulay
+  Linear mixing parameter: 0.05
+  old densities: 5
+  Damping of long wavelength oscillations: 50 
+
+Hamiltonian:
+  XC and Coulomb potentials evaluated on a 96*96*336 grid
+  Using the BEEF-vdW Exchange-Correlation functional
+  Interpolation: tri-quintic (5. degree polynomial)
+  Poisson solver: FastPoissonSolver using
+    Stencil: 8*3+1=25 point O(h^6) finite-difference Laplacian
+    FFT axes: [0, 1]
+    FST axes: [2]
+
+Dipole correction along z-axis 
+
+XC parameters: BEEF-vdW with 2 nearest neighbor stencil
+
+Memory estimate:
+  Process memory now: 151.31 MiB
+  Calculator: 303.14 MiB
+    Density: 74.41 MiB
+      Arrays: 18.95 MiB
+      Localized functions: 48.26 MiB
+      Mixer: 7.21 MiB
+    Hamiltonian: 15.96 MiB
+      Arrays: 12.39 MiB
+      XC: 0.00 MiB
+      Poisson: 0.00 MiB
+      vbar: 3.57 MiB
+    Wavefunctions: 212.77 MiB
+      Arrays psit_nG: 99.46 MiB
+      Eigensolver: 107.39 MiB
+      Projections: 0.12 MiB
+      Projectors: 5.79 MiB
+
+Total number of cores used: 24
+Parallelization over k-points: 6
+Domain decomposition: 1 x 1 x 4
+
+Number of atoms: 36
+Number of atomic orbitals: 144
+Number of bands in calculation: 69
+Number of valence electrons: 108
+Bands to converge: occupied
+
+... initialized
+
+Initializing position-dependent things.
+
+Creating initial wave functions:
+  69 bands from LCAO basis set
+
+                                             
+                                             
+                                             
+                                             
+                                             
+                 Al     Al     Al            
+                                             
+            Al    AAl    AAl    Al           
+       Al    AAl    AAl    Al                
+                                             
+        Al     Al    AAl    Al     Al        
+                                             
+                Al     Al     Al             
+                                             
+           Al    AAl    AAl    Al            
+                                             
+            Al     Al     Al                 
+       Al     Al     Al                      
+                                             
+                                             
+                                             
+                                             
+
+Positions:
+   0 Al     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Al     2.863782    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 Al     5.727565    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Al     1.431891    2.480108   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Al     4.295674    2.480108   10.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Al     7.159456    2.480108   10.000000    ( 0.0000,  0.0000,  0.0000)
+   6 Al     2.863782    4.960217   10.000000    ( 0.0000,  0.0000,  0.0000)
+   7 Al     5.727565    4.960217   10.000000    ( 0.0000,  0.0000,  0.0000)
+   8 Al     8.591347    4.960217   10.000000    ( 0.0000,  0.0000,  0.0000)
+   9 Al     1.431891    0.826703   12.338269    ( 0.0000,  0.0000,  0.0000)
+  10 Al     4.295674    0.826703   12.338269    ( 0.0000,  0.0000,  0.0000)
+  11 Al     7.159456    0.826703   12.338269    ( 0.0000,  0.0000,  0.0000)
+  12 Al     2.863782    3.306811   12.338269    ( 0.0000,  0.0000,  0.0000)
+  13 Al     5.727565    3.306811   12.338269    ( 0.0000,  0.0000,  0.0000)
+  14 Al     8.591347    3.306811   12.338269    ( 0.0000,  0.0000,  0.0000)
+  15 Al     4.295674    5.786920   12.338269    ( 0.0000,  0.0000,  0.0000)
+  16 Al     7.159456    5.786920   12.338269    ( 0.0000,  0.0000,  0.0000)
+  17 Al    10.023239    5.786920   12.338269    ( 0.0000,  0.0000,  0.0000)
+  18 Al     0.000000    1.653406   14.676537    ( 0.0000,  0.0000,  0.0000)
+  19 Al     2.863782    1.653406   14.676537    ( 0.0000,  0.0000,  0.0000)
+  20 Al     5.727565    1.653406   14.676537    ( 0.0000,  0.0000,  0.0000)
+  21 Al     1.431891    4.133514   14.676537    ( 0.0000,  0.0000,  0.0000)
+  22 Al     4.295674    4.133514   14.676537    ( 0.0000,  0.0000,  0.0000)
+  23 Al     7.159456    4.133514   14.676537    ( 0.0000,  0.0000,  0.0000)
+  24 Al     2.863782    6.613622   14.676537    ( 0.0000,  0.0000,  0.0000)
+  25 Al     5.727565    6.613622   14.676537    ( 0.0000,  0.0000,  0.0000)
+  26 Al     8.591347    6.613622   14.676537    ( 0.0000,  0.0000,  0.0000)
+  27 Al     0.000000    0.000000   17.014806    ( 0.0000,  0.0000,  0.0000)
+  28 Al     2.863782    0.000000   17.014806    ( 0.0000,  0.0000,  0.0000)
+  29 Al     5.727565    0.000000   17.014806    ( 0.0000,  0.0000,  0.0000)
+  30 Al     1.431891    2.480108   17.014806    ( 0.0000,  0.0000,  0.0000)
+  31 Al     4.295674    2.480108   17.014806    ( 0.0000,  0.0000,  0.0000)
+  32 Al     7.159456    2.480108   17.014806    ( 0.0000,  0.0000,  0.0000)
+  33 Al     2.863782    4.960217   17.014806    ( 0.0000,  0.0000,  0.0000)
+  34 Al     5.727565    4.960217   17.014806    ( 0.0000,  0.0000,  0.0000)
+  35 Al     8.591347    4.960217   17.014806    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    8.591347    0.000000    0.000000    48     0.1550
+  2. axis:    yes    4.295674    7.440325    0.000000    48     0.1550
+  3. axis:    no     0.000000    0.000000   27.014806   168     0.1608
+
+  Lengths:   8.591347   8.591347  27.014806
+  Angles:   90.000000  90.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1646
+
+     iter     time        total  log10-change:
+                         energy  eigst   dens
+iter:   1 23:03:52  -998.780648  +0.97
+iter:   2 23:06:02  -999.769480  +0.32  -1.65
+iter:   3 23:08:16 -1000.056823  -0.06  -2.05
+iter:   4 23:10:24 -1000.181717  -0.43  -2.44
+Writing to output.gpw (mode='')
+
+iter:   5 23:12:38 -1000.268832  -0.60  -2.32
+iter:   6 23:14:49 -1000.233284  -1.25  -2.04
+iter:   7 23:17:01 -1000.246526c -1.54  -2.31
+iter:   8 23:19:12 -1000.247624c -1.68  -2.28
+iter:   9 23:21:32 -1000.252396c -2.29  -2.27
+Writing to output.gpw (mode='')
+
+iter:  10 23:23:53 -1000.262961c -1.64  -2.25
+iter:  11 23:26:06 -1000.239033c -1.84  -2.15
+iter:  12 23:28:22 -1000.240268c -2.33  -2.67
+iter:  13 23:30:35 -1000.242076c -2.18  -2.72
+iter:  14 23:32:50 -1000.241989c -2.49  -2.82
+Writing to output.gpw (mode='')
+
+iter:  15 23:35:15 -1000.242892c -3.00  -2.81
+iter:  16 23:37:30 -1000.242599c -3.83  -2.69
+iter:  17 23:39:51 -1000.240698c -3.14  -2.70
+iter:  18 23:42:04 -1000.240778c -3.30  -3.34
+iter:  19 23:44:20 -1000.240846c -4.07  -3.50
+Writing to output.gpw (mode='')
+
+iter:  20 23:46:41 -1000.240837c -4.51  -3.36
+iter:  21 23:48:52 -1000.240757c -4.01  -3.32
+iter:  22 23:51:03 -1000.241407c -3.47  -3.72
+iter:  23 23:53:13 -1000.240791c -3.10  -2.93
+iter:  24 23:55:35 -1000.240742c -4.43  -3.51
+Writing to output.gpw (mode='')
+
+iter:  25 23:57:57 -1000.240741c -4.41  -3.81
+iter:  26 00:00:10 -1000.240738c -5.60  -4.00c
+iter:  27 00:02:22 -1000.240738c -5.88  -4.11c
+iter:  28 00:04:34 -1000.240737c -6.02  -4.14c
+iter:  29 00:06:48 -1000.240742c -6.22  -4.19c
+Writing to output.gpw (mode='')
+
+iter:  30 00:09:08 -1000.240741c -5.13  -4.03c
+iter:  31 00:11:25 -1000.240738c -5.23  -4.00c
+iter:  32 00:13:39 -1000.240738c -5.70  -4.39c
+iter:  33 00:15:54 -1000.240738c -6.17  -4.40c
+iter:  34 00:18:02 -1000.240739c -5.85  -4.95c
+Writing to output.gpw (mode='')
+
+iter:  35 00:20:25 -1000.240738c -6.28  -4.61c
+iter:  36 00:22:42 -1000.240738c -7.22  -4.55c
+iter:  37 00:24:59 -1000.240739c -6.26  -4.77c
+iter:  38 00:27:13 -1000.240738c -7.63c -4.96c
+
+Converged after 38 iterations.
+
+Dipole moment: (-8.333101, -4.811118, -0.000000) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -237723.237536)
+
+Kinetic:        +68.468838
+Potential:      -17.605537
+External:        +0.000000
+XC:            -1051.038247
+Entropy (-ST):   -0.115260
+Local:           -0.008163
+--------------------------
+Free energy:   -1000.298368
+Extrapolated:  -1000.240738
+
+Dipole-layer corrected work functions: 4.285942, 4.285942 eV
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    52     -4.51997    1.98162
+  0    53     -4.51997    1.98162
+  0    54     -4.43287    1.89944
+  0    55     -4.23068    0.49748
+
+  1    52     -4.76225    1.99985
+  1    53     -4.64776    1.99856
+  1    54     -4.64776    1.99856
+  1    55     -4.42184    1.87616
+
+
+Fermi level: -4.28594
+
+No gap

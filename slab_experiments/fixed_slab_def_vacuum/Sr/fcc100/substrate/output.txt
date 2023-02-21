@@ -1,0 +1,164 @@
+
+  ___ ___ ___ _ _ _  
+ |   |   |_  | | | | 
+ | | | | | . | | | | 
+ |__ |  _|___|_____|  22.8.0
+ |___|_|             
+
+User:   vazumah@c22.hercules
+Date:   Sun Jan 22 12:47:03 2023
+Arch:   x86_64
+Pid:    9339
+CWD:    /home/vazumah/Python_projects/LiNRR/autocad_start/slab_experiments/fixed_slab_def_vacuum/Sr/fcc100/substrate
+Python: 3.10.8
+gpaw:   /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/gpaw
+_gpaw:  /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/
+        _gpaw.cpython-310-x86_64-linux-gnu.so
+ase:    /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/ase (version 3.22.1)
+numpy:  /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/numpy (version 1.24.1)
+scipy:  /home/vazumah/.conda/envs/GPAW/lib/python3.10/site-packages/scipy (version 1.10.0)
+libxc:  5.2.3
+units:  Angstrom and eV
+cores: 24
+OpenMP: True
+OMP_NUM_THREADS: 1
+
+Input parameters:
+  eigensolver: {name: dav,
+                niter: 3}
+  h: 0.16
+  kpts: {size: [4, 4, 1]}
+  maxiter: 999
+  mixer: {backend: pulay,
+          beta: 0.02,
+          method: separate,
+          nmaxold: 5,
+          weight: 100}
+  occupations: {name: fermi-dirac,
+                width: 0.05}
+  poissonsolver: {dipolelayer: xy}
+  xc: BEEF-vdW
+
+System changes: positions, numbers, cell, pbc, initial_charges, initial_magmoms 
+
+Initialize ...
+
+species:
+  Sr:
+    name: Strontium
+    id: 1681cef0785a8ddd65899c0215808a0d
+    Z: 38.0
+    valence: 10
+    core: 28
+    charge: 0.0
+    file: /home/vazumah/.conda/envs/GPAW/share/gpaw/Sr.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.40,
+                           lmax: 2}
+    cutoffs: {filter: 2.39,
+              core: 1.85}
+    valence states:
+      #              energy  rcut
+      - 4s(2.00)   -40.883   1.291
+      - 5s(2.00)    -3.525   1.291
+      - 4p(6.00)   -22.826   1.291
+      -  p           4.386   1.291
+      -  d           0.000   1.254
+  
+    # Using partial waves for Sr as LCAO basis
+
+Reference energy: -3113883.720283  # eV
+
+Spin-paired calculation
+
+Convergence criteria:
+ Maximum [total energy] change in last 3 cyles: 0.0005 eV / electron
+ Maximum integral of absolute [dens]ity change: 0.0001 electrons / valence electron
+ Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+ Maximum number of scf [iter]ations: 999
+ (Square brackets indicate name in SCF output, whereas a 'c' in
+ the SCF output indicates the quantity has converged.)
+
+Symmetries present (total): 8
+
+  ( 1  0  0)  ( 1  0  0)  ( 0  1  0)  ( 0  1  0)  ( 0 -1  0)  ( 0 -1  0)
+  ( 0  1  0)  ( 0 -1  0)  ( 1  0  0)  (-1  0  0)  ( 1  0  0)  (-1  0  0)
+  ( 0  0  1)  ( 0  0  1)  ( 0  0  1)  ( 0  0  1)  ( 0  0  1)  ( 0  0  1)
+
+  (-1  0  0)  (-1  0  0)
+  ( 0  1  0)  ( 0 -1  0)
+  ( 0  0  1)  ( 0  0  1)
+
+16 k-points: 4 x 4 x 1 Monkhorst-Pack grid
+3 k-points in the irreducible part of the Brillouin zone
+       k-points in crystal coordinates                weights
+   0:     0.12500000    0.12500000    0.00000000          4/16
+   1:     0.37500000    0.12500000    0.00000000          8/16
+   2:     0.37500000    0.37500000    0.00000000          4/16
+
+Wave functions: Uniform real-space grid
+  Kinetic energy operator: 6*3+1=19 point O(h^6) finite-difference Laplacian
+  ScaLapack parameters: grid=1x1, blocksize=None
+  Wavefunction extrapolation:
+    Improved wavefunction reuse through dual PAW basis 
+
+Occupation numbers: Fermi-Dirac:
+  width: 0.0500  # eV
+ 
+
+Eigensolver
+   Davidson(niter=3) 
+
+Densities:
+  Coarse grid: 80*80*180 grid
+  Fine grid: 160*160*360 grid
+  Total Charge: 0.000000 
+
+Density mixing:
+  Method: separate
+  Backend: pulay
+  Linear mixing parameter: 0.02
+  old densities: 5
+  Damping of long wavelength oscillations: 100 
+
+Hamiltonian:
+  XC and Coulomb potentials evaluated on a 160*160*360 grid
+  Using the BEEF-vdW Exchange-Correlation functional
+  Interpolation: tri-quintic (5. degree polynomial)
+  Poisson solver: FastPoissonSolver using
+    Stencil: 6*3+1=19 point O(h^6) finite-difference Laplacian
+    FFT axes: [0, 1]
+    FST axes: [2]
+
+Dipole correction along z-axis 
+
+XC parameters: BEEF-vdW with 2 nearest neighbor stencil
+
+Memory estimate:
+  Process memory now: 190.11 MiB
+  Calculator: 899.15 MiB
+    Density: 81.59 MiB
+      Arrays: 28.22 MiB
+      Localized functions: 42.62 MiB
+      Mixer: 10.74 MiB
+    Hamiltonian: 22.20 MiB
+      Arrays: 18.46 MiB
+      XC: 0.00 MiB
+      Poisson: 0.00 MiB
+      vbar: 3.74 MiB
+    Wavefunctions: 795.37 MiB
+      Arrays psit_nG: 386.72 MiB
+      Eigensolver: 402.41 MiB
+      Projections: 0.16 MiB
+      Projectors: 6.08 MiB
+
+Total number of cores used: 24
+Parallelization over k-points: 3
+Domain decomposition: 1 x 2 x 4
+
+Number of atoms: 36
+Number of atomic orbitals: 180
+Number of bands in calculation: 180
+Number of valence electrons: 360
+Bands to converge: occupied
+
